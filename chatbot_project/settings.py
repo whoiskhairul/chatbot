@@ -1,9 +1,9 @@
 
-from dotenv import load_dotenv
 import os
-# Load environment variables from .env file
+from dotenv import load_dotenv
+# Load environment variables from .env files and assign them to the variables
 load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 
 from pathlib import Path
@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
+ 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-r$#^#e6@y4d*3k!(5t86-2*l)yw6#6(qv0e9s&=jgp6&!_)u=2'
 
